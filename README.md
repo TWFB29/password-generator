@@ -5,5 +5,5 @@ During this process you will be presented with a prompt to set the number of cha
 Your next series of events will contain a couple of alerts to help you decide what type of characters you want your password to have.
 After you have entered your accepted parameters you will be presented with your randomly generated secure password.
 <a href="https://twfb29.github.io/password-generator/">
-    ![image](./webpage-password.png)
+    ![image of a link to a random password generator that you can pick what type of password you want created](./webpage-password.png)
     </a>
