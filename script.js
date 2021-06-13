@@ -12,10 +12,6 @@ function writePassword() {
   var strLower = ("abcdefghijklmnopqrstuvwxy");
   var strChar =  (" !%&*+-./<>?~");
   var strNum =   ("0123456789");
-  var str1 = "";
-  var str2 = "";
-  var str3 = "";
-  var str4 = "";
   
   // Length Promt
   var confirmLen = (prompt("How long would you like your password to be? It must be between 8-128!"));
@@ -33,20 +29,28 @@ function writePassword() {
   var confirmChar = (confirm("Would you like to use special characters in your password?"));
   var confirmNum = (confirm("Would you like to use numbers in your password?"));
 
+  while (confirmUpper === false && confirmLower === false && confirmChar === false && confirmNum === false) {
+    alert("You must select at least one parameter.")
+    var confirmUpper = (confirm("Would you like to use uppercase in your password?"));
+    var confirmLower = (confirm("Would you like to use lowercase in your password?"));
+    var confirmChar = (confirm("Would you like to use special characters in your password?"));
+    var confirmNum = (confirm("Would you like to use numbers in your password?"));
+  }
+  var str = "";
   //applying the type of characters that were selected to be used
   if (confirmUpper === true) {
-    str1 = strUpper
+    str += strUpper
   };
   if (confirmUpper === true) {
-    str2 = strLower
+    str += strLower
   };
   if (confirmChar === true) {
-    str3 = strChar
+    str += strChar
   };
   if (confirmNum === true) {
-    str4 = strNum
+    str += strNum
   };
- var str = str1 + str2 + str3 + str4 
+ 
 console.log(str)
 
   for (i = 0; i <= confirmLen - 1; i++) {
